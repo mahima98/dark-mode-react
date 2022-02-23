@@ -32,18 +32,31 @@ function App() {
           checked={enabled}
           onChange={setEnabled}
           className={`${enabled ? "bg-teal-900" : "bg-teal-700"}
-          relative inline-flex flex-shrink-0 h-[38px] w-[74px] border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
+          relative inline-flex h-[38px] w-[74px] flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
         >
           <span
             aria-hidden="true"
             className={`${enabled ? "translate-x-9" : "translate-x-0"}
-            pointer-events-none inline-block h-[34px] w-[34px] rounded-full bg-white shadow-lg transform ring-0 transition ease-in-out duration-200`}
+            pointer-events-none inline-block h-[34px] w-[34px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
           />
         </Switch>
         <img src={logo} className="App-logo" alt="logo" />
-        <p className="text-[#61dafb] dark:text-white m-10">
+        <p className="card m-10 text-[#61dafb] dark:text-white">
           Toggle for dark mode!
         </p>
+        <div className="flex h-8 w-48 items-center justify-center bg-gray-700">
+          <div className="isolate flex items-center justify-center -space-x-6">
+            <div className="h-16 w-16 rounded-full bg-purple-500"></div>
+            <div className="h-16 w-16 rounded-full bg-teal-500 mix-blend-lighten"></div>
+          </div>
+        </div>
+        <div className="card isolate">A card</div>
+        <div className="columns-2 text-black">
+          <p>Well, let me tell you something, ...</p>
+          <p className="break-inside-avoid-column">Sure, go ahead, laugh...</p>
+          <p>Maybe we can live without...</p>
+          <p>Look. If you think this is...</p>
+        </div>
       </header>
     </div>
   );
